@@ -1,0 +1,46 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="square-jelly-box"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+
+<div class="container">
+  <div class="card">
+    <h2>🔗 URL Shortener</h2>
+
+    <form (ngSubmit)="shortenUrl()" #urlForm="ngForm">
+      <input
+        type="text"
+        name="url"
+        [(ngModel)]="longUrl"
+        required
+        #urlInput="ngModel"
+        placeholder="Enter a long URL..."
+      />
+      <button type="submit" [disabled]="urlForm.invalid">Shorten</button>
+    </form>
+
+    @if (error) {
+      <p class="error">{{ error }}</p>
+    }
+
+    @if (shortUrl && statsUrl) {
+      <div class="result-box">
+        <p>
+          ✅ <strong>Short URL:</strong>
+          <a [href]="shortUrl" target="_blank">{{ shortUrl }}</a>
+          <button (click)="copyToClipboard(shortUrl)">Copy</button>
+        </p>
+
+        <p>
+          📊 <strong>Stats:</strong>
+          <button (click)="goToStats()">View Stats</button>
+        </p>
+      </div>
+    }
+  </div>
+</div>

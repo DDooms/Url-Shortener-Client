@@ -1,59 +1,32 @@
-# UrlShortenerClient
+# Url Shortener Client
+## A Modern Web Application for url shortening
+This project implements a web-based Sudoku game and solver using Angular, providing users with an interactive platform to play Sudoku puzzles of various difficulties, validate their solutions, and even auto-solve challenging boards. It leverages a third-party API to fetch and process Sudoku boards, offering a dynamic and engaging experience.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+Screenshots
+![img.png](img.png)
 
-## Development server
+Features
+Shorten Long URLs: Enter any valid long URL and get a shortened version instantly
 
-To start a local development server, run:
+Copy to Clipboard: One-click copy button to grab the short URL
 
-```bash
-ng serve
-```
+View URL Statistics: Unique visits per day displayed in a bar chart. Top 10 visitor IPs displayed in a pie chart
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Loading Indicators: Visual feedback using spinners during API calls.
 
-## Code scaffolding
+Toast Notifications: Informative success and error messages for user actions.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+To start a local development server, type in the terminal:
 
 ```bash
-ng generate --help
+npm run start
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Once the server is running, your browser will automatically open
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+To execute unit tests, type in the terminal
 ```bash
-ng test
+npm run test
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
