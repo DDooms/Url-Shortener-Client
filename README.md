@@ -1,6 +1,6 @@
 # Url Shortener Client
 ## A Modern Web Application for url shortening
-This project implements a web-based Sudoku game and solver using Angular, providing users with an interactive platform to play Sudoku puzzles of various difficulties, validate their solutions, and even auto-solve challenging boards. It leverages a third-party API to fetch and process Sudoku boards, offering a dynamic and engaging experience.
+A modern and responsive frontend for a URL shortening service, featuring real-time statistics, clipboard interaction, and visual charts.
 
 Screenshots
 ![img.png](img.png)
