@@ -34,7 +34,6 @@ describe('ViewStats Component', () => {
     fixture = TestBed.createComponent(ViewStats);
     component = fixture.componentInstance;
 
-    // Mock the canvas DOM elements
     component.barCanvas = new ElementRef(document.createElement('canvas'));
     component.pieCanvas = new ElementRef(document.createElement('canvas'));
   });
@@ -62,7 +61,6 @@ describe('ViewStats Component', () => {
   });
 
   it('should destroy both charts on ngOnDestroy', () => {
-    // Mock charts with destroy spies
     component.barChart = jasmine.createSpyObj<Chart>('Chart', ['destroy']);
     component.pieChart = jasmine.createSpyObj<Chart>('Chart', ['destroy']);
 

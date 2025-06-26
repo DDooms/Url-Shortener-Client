@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {HttpTestingController, provideHttpClientTesting} from '@angular/common/http/testing';
 import { Stats } from './stats';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('Stats Service', () => {
   let service: Stats;
@@ -8,8 +9,12 @@ describe('Stats Service', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [Stats]
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        Stats
+      ]
+
     });
 
     service = TestBed.inject(Stats);
@@ -17,7 +22,7 @@ describe('Stats Service', () => {
   });
 
   afterEach(() => {
-    httpMock.verify(); // Ensure no unmatched requests
+    httpMock.verify();
   });
 
   it('should fetch stats by secret code', () => {

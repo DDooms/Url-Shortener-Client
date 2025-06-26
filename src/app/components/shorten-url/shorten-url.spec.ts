@@ -1,12 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ShortenUrl } from './shorten-url';
 import { Url } from '../../services/url';
-import { of, throwError } from 'rxjs';
+import { throwError } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
-import { fakeAsync, tick } from '@angular/core/testing';
 
 describe('ShortenUrl Component', () => {
   let component: ShortenUrl;
